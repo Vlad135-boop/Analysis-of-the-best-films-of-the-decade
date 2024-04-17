@@ -99,19 +99,3 @@ class Movies:
         plt.bar(x=year_dict.keys(), height=year_dict.values())
         plt.title('Количество лучших фильмов в каждом году десятилетия')
         plt.show()
-    
-
-
-
-        
-
-
-
-# URL_MOVIES = 'https://www.afisha.ru/selection/75-luchshih-filmov-desyatiletiya--po-versii-zapadnyh-kinokritikov/'
-
-# response_films = requests.get(url=URL_MOVIES)
-
-
-# movies_soup = BeautifulSoup(response_films.text, 'html.parser')
-# movie = Movies(movies_soup=movies_soup)
-
