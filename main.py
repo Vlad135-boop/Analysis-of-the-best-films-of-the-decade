@@ -1,11 +1,14 @@
-from bs4 import BeautifulSoup
 import requests
-import matplotlib.pyplot as plt
 import pandas as pd
+
+from matplotlib import pyplot as plt
+from bs4 import BeautifulSoup
 
 
 class Movies:
-    'This class was created for data analysis'
+    """
+    This class was created for data analysis
+    """
 
     def __init__(self, movies_soup):
         self.movies_soup = movies_soup
@@ -15,8 +18,8 @@ class Movies:
         """
         This function will return the top most popular movies of the decade
 
-        :param tag:
-        :param class_:
+        :param tag: а что это?
+        :param class_: а что это?
         :return movie_list:
         """
 
@@ -31,8 +34,8 @@ class Movies:
         """
         This function will return the top genres of the most popular movies
 
-        :param tag:
-        :param class_:
+        :param tag: а что это?
+        :param class_: а что это?
         :return all_genre:
         """
 
@@ -57,8 +60,8 @@ class Movies:
         """
         This function will plot the rating of the most popular movies
 
-        :param tag:
-        :param class_:
+        :param tag: а что это?
+        :param class_: а что это?
         :return None:
         """
 
@@ -78,8 +81,8 @@ class Movies:
         """
         This function will plot a bar chart in which the number of popular movies corresponds to the years of the decade
         
-        :param tag:
-        :param class_:
+        :param tag: а что это?
+        :param class_: а что это?
         :return None:
         """
 
@@ -90,6 +93,8 @@ class Movies:
             try:
                 year_list.append(int(year.get_text()[:4]))
             except ValueError:
+                # так делать нельзя, хотя бы принтани ошибку, 
+                # иначе ошибка будет не замечена 
                 continue
         
         year_set = set(year_list)
