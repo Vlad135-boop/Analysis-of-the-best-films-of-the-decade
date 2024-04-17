@@ -1,6 +1,7 @@
+import requests # лучше сортировать import'ы, сперва import, а потом уже from ... import
 from bs4 import BeautifulSoup
-import requests
-from main import Movies
+from main import Movies # а почему файл не назвал movie? 
+
 
 URL_MOVIES = 'https://www.afisha.ru/selection/75-luchshih-filmov-desyatiletiya--po-versii-zapadnyh-kinokritikov/'
 
@@ -15,3 +16,8 @@ print(movie.get_movies_list('a', "CjnHd y8A5E nbCNS yknrM"))
 print(movie.get_genres_stat('div', 'S_wwn'))
 print(movie.get_rating_plot('div', 'IrSqF KDBPA BNjPz k96pX'))
 print(movie.get_release_years_plot('div', 'S_wwn'))
+
+# та и файл назвать не test, а main, так как он у тебя главный
+
+# по хорошему добавить бы эту конструкцию:
+# if __name__ == '__main__'
